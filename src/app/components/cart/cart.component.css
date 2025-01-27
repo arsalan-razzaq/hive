@@ -1,0 +1,121 @@
+.close {
+    background: pink ;
+    padding: 6px 10px;
+    color: #000;
+    border-radius: 50%;
+
+}
+
+.breadcumb-wrap {
+    margin-top: 20px;
+    border: 1px solid rgba(93, 102, 111, .15);
+    border-width: 1px 0 1px 0;
+}
+
+.breadcumb-wrap ol {
+    padding-left: 0;
+    margin-bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.breadcumb-wrap ol li {
+    padding: 10px;
+}
+
+.breadcumb-wrap ol li:nth-child(1) a {
+    color: #5d666f;
+}
+
+.heading-title>h2 {
+    font-size: 30px;
+    color: #5d666f;
+}
+
+a.c-btn {
+    cursor: pointer;
+    font-weight: bold !important;
+}
+
+.cart-total-wrapper {
+    display: flex;
+}
+
+.cart-b {
+    padding-top: 0 !important;
+}
+
+.cart-area .cart-product-list {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.cart-area .submit-btn-area {
+    justify-content: space-between;
+}
+
+@media only screen and (min-width:1024px) {
+    .cart-area {
+        margin-bottom: 200px;
+    }
+
+}
+
+.c-btn {
+    padding: 10px 20px;
+
+    color: #000;
+    display: block;
+    min-width: 200px;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid pink ;
+    border-radius: 50px;
+
+}
+
+.animate-btn {
+    position: relative;
+}
+
+.animate-btn::before {
+    content: '';
+    width: 0;
+    height: 100%;
+    display: block;
+    background-color: pink ;
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.1s width ease-in-out;
+    border-radius: 50px;
+}
+
+.animate-btn:hover::before {
+    width: 100%;
+}
+
+.animate-btn:hover {
+    text-shadow: 10px 10px 10px #000;
+}
+
+.c-shopping {
+    position: relative;
+    top: 41px;
+}
+
+
+.btn_clear{
+    background-color: pink ;
+    color: #000;
+    height: 35px;
+}
+

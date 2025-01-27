@@ -1,0 +1,195 @@
+
+.sidebar {
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.71);
+  box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.34);
+  padding: 20px;
+  height: fit-content;
+  width: 100%;
+}
+.main_heading{color: #000;
+  font-family: Poppins;
+  font-size: 31px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; /* 77.419% */
+  margin-bottom: 0px !important ;
+}
+.welcome-text {
+  color: #000;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 100% */
+  margin-bottom: 16px;
+}
+
+.account-title {
+  color: #EC1A61;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; /* 82.759% */
+  margin-bottom: 20px;
+}
+
+.nav-menu {
+  list-style: none;
+}
+
+.nav-item {
+  margin-bottom: 12px;
+  border-bottom:  2px solid  rgba(0, 0, 0, 0.20);
+}
+
+.nav-link {
+  color: #000;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 24px; /* 126.316% */
+  text-decoration: none;
+
+  display: block;
+  padding: 8px 0;
+}
+
+.nav-link:hover {
+  color: #ff4d8d;
+}
+
+
+
+.card {
+  border-radius: 18px;
+  background: #FFF;
+  box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.34);
+  padding: 0px;
+  height: 100%;
+}
+.profile-info p{
+  color: #000;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  margin-bottom: 0px;
+ /* 133.333% */
+}
+.defualt_address{
+  color: #6B6A6A;
+font-family: Poppins;
+font-size: 13px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 133.333% */
+}
+.card-header {
+  display: flex
+  ;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0px;
+      padding: 20px 22px 0px 22px;
+      background-color: transparent;
+      border: none;
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.edit-icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.profile-info, .address-info {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.address-label {
+  color: #999;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.newsletter-link {
+  color: #ff4d8d;
+  text-decoration: none;
+  font-size: 14px;
+  margin-top: 12px;
+  display: inline-block;
+}
+
+.recent-orders {
+  grid-column: 1 / -1;
+}
+
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+}
+
+.orders-table th {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  font-weight: 500;
+  color: #666;
+}
+
+.orders-table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  color: #333;
+}
+
+.manage-btn {
+  padding: 6px 16px;
+  border: 1px solid #ff4d8d;
+  border-radius: 4px;
+  color: #ff4d8d;
+  background: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.manage-btn:hover {
+  background: #fff5f8;
+}
+
+@media (max-width: 768px) {
+  .container {
+      grid-template-columns: 1fr;
+  }
+
+  .main-content {
+      grid-template-columns: 1fr;
+  }
+
+  .orders-table {
+      display: block;
+      overflow-x: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+      padding: 12px;
+  }
+
+  .card {
+      padding: 16px;
+  }
+}

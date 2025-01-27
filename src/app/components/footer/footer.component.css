@@ -1,0 +1,134 @@
+
+.footer {
+  background:  linear-gradient(90deg, #e91e63 0%, #4a148c 100%);
+  color: white;
+  padding: 3rem 2rem;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+.footer-section, .footer-section-s2 {
+  background:none;
+}
+.footer-links {
+  max-width: 100%;
+  margin: 0 auto;
+}
+.footer-section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 0.75rem;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: white;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-icons a {
+  width: 35px;
+  height: 35px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.social-icons a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.social-icons img {
+  width: 18px;
+  height: 18px;
+  filter: brightness(0) invert(1);
+}
+
+.app-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.app-buttons img {
+  height: 40px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.app-buttons img:hover {
+  opacity: 0.8;
+}
+
+.bottom-bar {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.bottom-links {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.bottom-links a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.bottom-links a:hover {
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+  }
+
+  .bottom-bar {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .bottom-links {
+      justify-content: center;
+  }
+}

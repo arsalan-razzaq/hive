@@ -1,0 +1,143 @@
+<div class="preloader" *ngIf="loading">
+    <svg class="cart" role="img" aria-label="Shopping cart line animation" viewBox="0 0 128 128" width="128px"
+        height="128px" xmlns="http://www.w3.org/2000/svg">
+        <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="8">
+            <g class="cart__track" stroke="hsla(0,10%,10%,0.1)">
+                <polyline points="4,4 21,4 26,22 124,22 112,64 35,64 39,80 106,80" />
+                <circle cx="43" cy="111" r="13" />
+                <circle cx="102" cy="111" r="13" />
+            </g>
+            <g class="cart__lines" stroke="currentColor">
+                <polyline class="cart__top" points="4,4 21,4 26,22 124,22 112,64 35,64 39,80 106,80"
+                    stroke-dasharray="338 338" stroke-dashoffset="-338" />
+                <g class="cart__wheel1" transform="rotate(-90,43,111)">
+                    <circle class="cart__wheel-stroke" cx="43" cy="111" r="13" stroke-dasharray="81.68 81.68"
+                        stroke-dashoffset="81.68" />
+                </g>
+                <g class="cart__wheel2" transform="rotate(90,102,111)">
+                    <circle class="cart__wheel-stroke" cx="102" cy="111" r="13" stroke-dasharray="81.68 81.68"
+                        stroke-dashoffset="81.68" />
+                </g>
+            </g>
+        </g>
+    </svg>
+
+</div>
+<div class="container">
+    <div class="col col-xs-12 d-flex justify-content-between">
+        <div class="breadcumb-wrap w-100">
+            <ol class="w-100 d-flex align-items-center">
+                <div></div>
+                <li><a routerLink="/"><i class="fa-solid fa-caret-right"></i> Home</a></li>
+                <li>
+                    <i class="fa fa-angle-right"></i>
+                </li>
+                <li><a style="color:#FBB615" href="/Cart">Cart</a></li>
+                <li class="ms-auto"> <!-- Add ms-auto to push it to the end -->
+                    <button class="btn btn_clear" (click)="clear_cart()">Clear</button>
+                </li>
+            </ol>
+        </div>
+        
+    </div>
+</div>
+<div class="cart-area pt-5">
+    <div class="container">
+        <div class="form">
+            <div class="cart-wrapper">
+                <div class="heading-title">
+                    <h2> Cart</h2>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <form action="cart">
+                            <table class="table-responsive cart-wrap">
+                                <thead>
+                                    <tr>
+                                        <th class="product-2">Product</th>
+                                        <th class="pr">Price</th>
+                                        <th class="ptice">QTY</th>
+                                        <th class="stock">Subtotal </th>
+                                        <th class="stock">Action </th>
+                                    </tr>
+                                </thead>
+                                <tbody *ngIf="this.cart_data && this.cart_data.length  != []  ;else noProducts">
+                                    <tr *ngFor="let cart of cart_data?.temp_order_list; let i = index">
+                                        <td class="product">
+                                            <ul>
+                                                <li><img src="{{cart.product?.image}}" alt=""></li>
+                                                <li class="first-cart" (click)="get_product_detail(cart.product)">
+                                                    {{cart.product.name}} {{var_name(cart.v_id ??
+                                                    0,cart.product)}} </li>
+
+                                            </ul>
+                                        </td>
+                                        <td class="price"> $   {{pp(cart)}}</td>
+                                        <td class="stock">
+                                            
+                                            <ul class="input-style w-100 d-flex justify-content-center">
+                                                <div class="MuiGrid-root quantity cart-plus-minus css-rfnosa"><button  (click)="decrementQuantity(cart)" 
+                                                        class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium dec qtybutton css-1ujsas3"
+                                                        tabindex="0" type="button">-<span
+                                                            class="MuiTouchRipple-root css-w0pj6f"></span></button><input
+                                                        type="text" value="{{cart.qty}}"><button  (click)="incrementQuantity(cart)"
+                                                        class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium inc qtybutton css-1ujsas3"
+                                                        tabindex="0" type="button">+<span
+                                                            class="MuiTouchRipple-root css-w0pj6f"></span></button>
+                                                </div>
+                                             </ul>
+                                        </td>
+                                        <td class="price"> $   {{ cart.type == 'Single' ? cart.price * cart.qty :
+                                            cart.price }}</td>
+                                        <td>
+                                            <button class=" ms-3 btn close" (click)="removeFromCart(cart)">
+                                                <i class="fa fa-trash text-white"></i></button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <ng-template #noProducts>
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="4" class="text-center">No products in the cart</td>
+                                        </tr>
+                                    </tbody>
+                                </ng-template>
+
+
+                            </table>
+                        </form>
+                        <div class="submit-btn-area">
+                            <div class="left-coupon">
+
+                                <a class="btn-style-1" routerLink="/Pro"> Continue Shopping</a>
+
+                            </div>
+                            <div class="cart-product-list">
+                                <ul>
+                                    <!-- Existing total without VAT -->
+                                    <li><span> {{ totalPrices(cart_data) }}</span></li>
+                                    
+                                    <!-- Show total price before VAT -->
+                                     
+                                    <!-- VAT calculation (15%) -->
+                                    <!-- <li class="cart-b">VAT (15%)<span> $   {{ (totalPrice * 0.15) | number : '1.0-2' }}</span></li> -->
+                                    
+                                    <!-- Total price including VAT -->
+                                    <li class="cart-b">Total Price (incl. VAT)<span> $   {{ (totalPrice) | number : '1.0-2' }}</span></li>
+                                    <li><span class="text-dark" style="font-size: 12px;
+                                    font-weight: 900;">"Prices are inclusive of a 15% VAT levy."</span></li>
+                                    <!-- Proceed to checkout button -->
+                                    <li>
+                                        <a class="btn-style-1" style="line-height: 26px;" (click)="moveto_checkout()">
+                                            Proceed to Checkout
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,81 @@
+ .sreach_header_input{
+    border-radius: 12px;
+    background: #FFF;
+    color: #363636;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    border: none;
+    padding: 8px;
+    width: 100%;
+ }
+ .header_Sreach_btn{
+    border-radius: 12px;
+    background: #FFCD1C;
+    color: #000;
+    font-family: "Work Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    padding: 7px 16px;
+    border: none;
+ }
+ #header-sticky {
+    background: #30025C;
+    mix-blend-mode: hard-light;
+    padding: 10px;
+}
+.nav li a {
+     color: #FFF;
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px; /* 150% */
+}
+
+
+
+.user-profile {
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  z-index: 1000;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      padding: 10px 15px;
+      border-bottom: 1px solid #eee;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      a {
+        text-decoration: none;
+        color: #333;
+        display: block;
+
+        &:hover {
+          background-color: #f5f5f5;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,101 @@
+<div class="container-fluid">
+    <div class="container d-flex justify-content-center">
+        <div class="login-container">
+            <!-- Tab Navigation -->
+            <ul class="nav nav-tabs" id="loginSignupTabs" role="tablist">
+                 
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login" type="button" role="tab" aria-controls="login" aria-selected="true">Login</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="signup-tab" data-bs-toggle="tab" data-bs-target="#signup" type="button" role="tab" aria-controls="signup" aria-selected="false">Sign up</button>
+                </li>
+            </ul>
+
+            <!-- Tab Content -->
+            <div class="tab-content" id="loginSignupContent">
+                <!-- Login Tab -->
+                <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+                    <form>
+                        <div class="form-group mt-3">
+                            <label>Phone Number or Email</label>
+                            <input type="text" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input type="password" required>
+                        </div>
+                        <a href="#" class="forgot-password">Forgot Password?</a>
+                        <button type="submit" class="login-btn">Login</button>
+                        <div class="divider">
+                            <span>or</span>
+                        </div>
+                        <div class="social-buttons">
+                            <button type="button" class="social-btn facebook">
+                                Facebook
+                            </button>
+                            <button type="button" class="social-btn google">
+                                Google
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Signup Tab -->
+                <div class="tab-pane fade" id="signup" role="tabpanel" aria-labelledby="signup-tab">
+                    <form class="mt-2 mb-2">
+                        <div class="form-group">
+                            <label>Phone Number or Email</label>
+                            <input type="text" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Full name</label>
+                            <input type="text" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Verification Code from WhatsApp</label>
+                            <input type="text" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input type="password" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Birthday</label>
+                            <div class="birthday-group">
+                                <input type="text" placeholder="Month" required>
+                                <input type="text" placeholder="Day" required>
+                                <input type="text" placeholder="Year" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Gender</label>
+                            <select required>
+                                <option value="">Select</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="terms">
+                            By clicking "Sign up", I agree to Terms of Service and Privacy Policy
+                        </div>
+                        <button type="submit" class="login-btn">Login</button>
+                        <div class="divider">
+                            <span>or</span>
+                        </div>
+                        <div class="social-buttons">
+                            <button type="button" class="social-btn facebook">
+                                Facebook
+                            </button>
+                            <button type="button" class="social-btn google">
+                                Google
+                            </button>
+                        </div>
+                    </form>
+                 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
